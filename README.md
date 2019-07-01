@@ -9,6 +9,20 @@ Material Alert Dialog
 
 ## Installation
 Add this into yout root build.gradle file
+```java
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
+}
+```
+Add the dependency to your module build.gradle:
+```java
+dependencies {
+	implementation 'com.github.umairayub79:MaDialog:1.0'
+}
+```
 
 ```java
 //build a simple dialog
