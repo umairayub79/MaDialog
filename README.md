@@ -24,6 +24,7 @@ dependencies {
 }
 ```
 
+## Example Usage
 ```java
 //build a simple dialog
 
@@ -62,3 +63,4 @@ dependencies {
 .setPositiveButtonListener(MaDialogListener);
 .setNegativeButtonListener(MaDialogListener);
 .build();
+```
