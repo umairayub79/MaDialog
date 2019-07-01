@@ -8,7 +8,7 @@ Material Alert Dialog
 - simple beautiful dialogs with image support
 
 ## Installation
-Add this into yout root build.gradle file
+Add this into your project's root build.gradle file
 ```java
 allprojects {
 	repositories {
