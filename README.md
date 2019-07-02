@@ -7,6 +7,13 @@ Material Alert Dialog
 - written in Java
 - simple beautiful dialogs with image and GIF support
 
+
+## Screenshots
+![Example screenshot 1](./example_screenshots/example_screenshot1.png)
+![Example screenshot 2](./example_screenshots/example_screenshot2.png)
+![Example screenshot 3](./example_screenshots/example_screenshot3.png)
+
+
 ## Installation
 Add this into your project's root build.gradle file
 ```java
