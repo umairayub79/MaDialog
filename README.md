@@ -5,7 +5,7 @@ Material Alert Dialog
 
 - min SDK 16
 - written in Java
-- simple beautiful dialogs with image support
+- simple beautiful dialogs with image and GIF support
 
 ## Installation
 Add this into your project's root build.gradle file
@@ -20,7 +20,7 @@ allprojects {
 Add the dependency to your module build.gradle:
 ```java
 dependencies {
-	implementation 'com.github.umairayub79:MaDialog:1.0'
+	implementation 'com.github.umairayub79:MaDialog:1.1'
 }
 ```
 
@@ -53,6 +53,7 @@ dependencies {
 .setTitle(String);
 .setMessage(String);
 .setImage(int);
+.setGif(int);
 .setMessageTextColor(int);
 .setTitleTextColor(int);
 .setButtonTextColor(int);
