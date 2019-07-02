@@ -96,16 +96,16 @@ public class MaDialog {
             return this;
         }
 
+        public Builder setGif(int gif) {
+            this.gif = gif;
+            return this;
+        }
         public Builder setImage(int image) {
             this.image = image;
 
             return this;
         }
 
-        public Builder setGif(int gif) {
-            this.gif = gif;
-            return this;
-        }
 
         public Builder setTitleTextColor(int titleTextColor) {
             this.titleTextColor = titleTextColor;
