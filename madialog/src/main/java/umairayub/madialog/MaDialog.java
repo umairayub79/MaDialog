@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 public class MaDialog {
 
     public static class Builder {
@@ -31,7 +33,8 @@ public class MaDialog {
                 messageTextColor,
                 titleTextColor,
                 backgroundColor,
-                image;
+                image,
+                gif;
 
         private boolean
                 cancelOnOutsideTouch = true;
@@ -99,6 +102,11 @@ public class MaDialog {
             return this;
         }
 
+        public Builder setGif(int gif) {
+            this.gif = gif;
+            return this;
+        }
+
         public Builder setTitleTextColor(int titleTextColor) {
             this.titleTextColor = titleTextColor;
             return this;
@@ -133,8 +141,14 @@ public class MaDialog {
             if (image != 0){
                 imageView.setVisibility(View.VISIBLE);
                 imageView.setImageResource(image);
-            }else {
-                imageView.setVisibility(View.GONE);
+            }
+            if (gif != 0) {
+                imageView.setVisibility(View.VISIBLE);
+                Glide.with(context)
+                        .asGif()
+                        .load(gif)
+                        .into(imageView);
+
             }
             if (messageTextColor != 0) {
                 tvMessage.setTextColor(messageTextColor);

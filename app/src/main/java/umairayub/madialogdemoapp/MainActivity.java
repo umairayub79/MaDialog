@@ -1,17 +1,17 @@
 package umairayub.madialogdemoapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import umairayub.madialog.MaDialog;
 import umairayub.madialog.MaDialogListener;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn1,btn2,btn3,btn4,btn5;
+    Button btn1, btn2, btn3, btn4, btn5, btn6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         btn3 = (Button) findViewById(R.id.btn3);
         btn4 = (Button) findViewById(R.id.btn4);
         btn5 = (Button) findViewById(R.id.btn5);
+        btn6 = (Button) findViewById(R.id.btn6);
 
 
 
@@ -94,6 +95,30 @@ public class MainActivity extends AppCompatActivity {
                         .setTitle("Basic with Image + Title + Buttons")
                         .setMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque, turpis et fringilla malesuada, leo velit ullamcorper enim, quis iaculis metus urna ut ligula. Sed malesuada lacinia massa, a accumsan justo condimentum vel.")
                         .setImage(R.drawable.image)
+                        .setPositiveButtonText("Yes")
+                        .setNegativeButtonText("Cancel")
+                        .setPositiveButtonListener(new MaDialogListener() {
+                            @Override
+                            public void onClick() {
+
+                            }
+                        })
+                        .setNegativeButtonListener(new MaDialogListener() {
+                            @Override
+                            public void onClick() {
+
+                            }
+                        })
+                        .build();
+            }
+        });
+        btn6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new MaDialog.Builder(MainActivity.this)
+                        .setTitle("Basic with GIF + Title + Buttons")
+                        .setMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque, turpis et fringilla malesuada, leo velit ullamcorper enim, quis iaculis metus urna ut ligula. Sed malesuada lacinia massa, a accumsan justo condimentum vel.")
+                        .setGif(R.drawable.dragon)
                         .setPositiveButtonText("Yes")
                         .setNegativeButtonText("Cancel")
                         .setPositiveButtonListener(new MaDialogListener() {

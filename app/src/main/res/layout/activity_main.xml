@@ -48,6 +48,12 @@
                 android:layout_height="wrap_content"
                 android:text="Basic + Image + Title + Buttons" />
 
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Basic + GIF + Title + Buttons" />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
