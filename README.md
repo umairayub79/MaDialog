@@ -9,9 +9,9 @@ Material Alert Dialog
 
 
 ## Screenshots
-![Example screenshot 1](./example_screenshots/example_screenshot1.png)
-![Example screenshot 2](./example_screenshots/example_screenshot2.png)
-![Example screenshot 3](./example_screenshots/example_screenshot3.png)
+![Example screenshot 1](./example_screenshots/example_screenshot1.jpg)
+![Example screenshot 2](./example_screenshots/example_screenshot2.jpg)
+![Example screenshot 3](./example_screenshots/example_screenshot3.jpg)
 
 
 ## Installation
