@@ -54,6 +54,15 @@
                 android:layout_height="wrap_content"
                 android:text="Basic + GIF + Title + Buttons" />
 
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorAccent"
+                android:text="View MaDialog On Github"
+                android:textColor="#fff" />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

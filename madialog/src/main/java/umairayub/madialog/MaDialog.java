@@ -3,6 +3,7 @@ package umairayub.madialog;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.core.content.res.ResourcesCompat;
 
 import com.bumptech.glide.Glide;
 
@@ -34,7 +37,8 @@ public class MaDialog {
                 titleTextColor,
                 backgroundColor,
                 image,
-                gif;
+                gif,
+                font_id;
 
         private boolean
                 cancelOnOutsideTouch = true;
@@ -54,6 +58,11 @@ public class MaDialog {
 
         public Builder setMessage(String message) {
             this.message = message;
+            return this;
+        }
+
+        public Builder setCustomFont(int font_id) {
+            this.font_id = font_id;
             return this;
         }
 
@@ -149,6 +158,13 @@ public class MaDialog {
                         .load(gif)
                         .into(imageView);
 
+            }
+            if (font_id != 0) {
+                Typeface tf = ResourcesCompat.getFont(context, font_id);
+                tvTitle.setTypeface(tf);
+                tvMessage.setTypeface(tf);
+                btnPositve.setTypeface(tf);
+                btnNegative.setTypeface(tf);
             }
             if (messageTextColor != 0) {
                 tvMessage.setTextColor(messageTextColor);
