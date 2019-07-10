@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,6 +15,7 @@ import umairayub.madialog.MaDialogListener;
 public class MainActivity extends AppCompatActivity {
 
     Button btn1, btn2, btn3, btn4, btn5, btn6, btn7;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         btn5 = (Button) findViewById(R.id.btn5);
         btn6 = (Button) findViewById(R.id.btn6);
         btn7 = (Button) findViewById(R.id.btn7);
-
 
 
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -51,15 +52,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 new MaDialog.Builder(MainActivity.this)
                         .setMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque, turpis et fringilla malesuada, leo velit ullamcorper enim, quis iaculis metus urna ut ligula. Sed malesuada lacinia massa, a accumsan justo condimentum vel.")
-                        .setPositiveButtonText("Yes")
-                        .setNegativeButtonText("Cancel")
-                        .setPositiveButtonListener(new MaDialogListener() {
+                        .setButtonOrientation(LinearLayout.HORIZONTAL)
+                        .AddNewButton(R.style.AppTheme, "Yes", new MaDialogListener() {
                             @Override
                             public void onClick() {
 
                             }
                         })
-                        .setNegativeButtonListener(new MaDialogListener() {
+                        .AddNewButton(R.style.AppTheme, "No", new MaDialogListener() {
                             @Override
                             public void onClick() {
 
@@ -75,15 +75,13 @@ public class MainActivity extends AppCompatActivity {
 
                         .setTitle("Basic with Title + Buttons")
                         .setMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque, turpis et fringilla malesuada, leo velit ullamcorper enim, quis iaculis metus urna ut ligula. Sed malesuada lacinia massa, a accumsan justo condimentum vel. ")
-                        .setPositiveButtonText("Yes")
-                        .setNegativeButtonText("Cancel")
-                        .setPositiveButtonListener(new MaDialogListener() {
+                        .AddNewButton(R.style.AppTheme, "Yes", new MaDialogListener() {
                             @Override
                             public void onClick() {
 
                             }
                         })
-                        .setNegativeButtonListener(new MaDialogListener() {
+                        .AddNewButton(R.style.AppTheme, "Cancel", new MaDialogListener() {
                             @Override
                             public void onClick() {
 
@@ -99,15 +97,13 @@ public class MainActivity extends AppCompatActivity {
                         .setTitle("Basic with Image + Title + Buttons")
                         .setMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque, turpis et fringilla malesuada, leo velit ullamcorper enim, quis iaculis metus urna ut ligula. Sed malesuada lacinia massa, a accumsan justo condimentum vel.")
                         .setImage(R.drawable.image)
-                        .setPositiveButtonText("Yes")
-                        .setNegativeButtonText("Cancel")
-                        .setPositiveButtonListener(new MaDialogListener() {
+                        .AddNewButton(R.style.AppTheme, "Yes", new MaDialogListener() {
                             @Override
                             public void onClick() {
 
                             }
                         })
-                        .setNegativeButtonListener(new MaDialogListener() {
+                        .AddNewButton(R.style.AppTheme, "Cancel", new MaDialogListener() {
                             @Override
                             public void onClick() {
 
@@ -123,17 +119,13 @@ public class MainActivity extends AppCompatActivity {
                         .setTitle("Basic with GIF + Title + Buttons")
                         .setMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque, turpis et fringilla malesuada, leo velit ullamcorper enim, quis iaculis metus urna ut ligula. Sed malesuada lacinia massa, a accumsan justo condimentum vel.")
                         .setGif(R.drawable.dragon)
-                        .setPositiveButtonText("Yes")
-                        .setNegativeButtonText("Cancel")
-                        .setCustomFont(R.font.press_start_2p)
-
-                        .setPositiveButtonListener(new MaDialogListener() {
+                        .AddNewButton(R.style.AppTheme, "Yes", new MaDialogListener() {
                             @Override
                             public void onClick() {
 
                             }
                         })
-                        .setNegativeButtonListener(new MaDialogListener() {
+                        .AddNewButton(R.style.AppTheme, "Cancel", new MaDialogListener() {
                             @Override
                             public void onClick() {
 

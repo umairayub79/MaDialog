@@ -50,6 +50,7 @@
                 android:paddingStart="16dp"/>
 
             <LinearLayout
+                android:id="@+id/buttonLayout"
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginTop="8dp"
@@ -61,18 +62,17 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:padding="8dp"
-                    android:id="@+id/btnNegative"
+                    android:id="@+id/btn_positive"
+                    android:background="@android:color/transparent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent" />
-
+                    android:visibility="gone" />
                 <Button
-                    android:padding="8dp"
-                    android:id="@+id/btnPositive"
+                    android:id="@+id/btn_negative"
+                    android:background="@android:color/transparent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent" />
+                    android:visibility="gone" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
