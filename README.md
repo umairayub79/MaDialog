@@ -27,7 +27,7 @@ allprojects {
 Add the dependency to your module build.gradle:
 ```java
 dependencies {
-	implementation 'com.github.umairayub79:MaDialog:1.1'
+	implementation 'com.github.umairayub79:MaDialog:1.3'
 }
 ```
 
@@ -40,6 +40,13 @@ dependencies {
                         .setMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisquevel. ")
                         .setPositiveButtonText("ok")
                         .setNegativeButtonText("cancel")
+			setButtonOrientation(LinearLayout.HORIZONTAL)
+                        .AddNewButton(R.style.AppTheme, "Yes", new MaDialogListener() {
+                            @Override
+                            public void onClick() {
+
+                            }
+                        })
                         .setPositiveButtonListener(new MaDialogListener() {
                             @Override
                             public void onClick() {
