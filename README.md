@@ -71,6 +71,8 @@ dependencies {
 .setMessageTextColor(int);
 .setTitleTextColor(int);
 .setButtonTextColor(int);
+.AddNewButton(int,String,MaDialogListener);
+.setButtonOrientation(int);
 .setBackgroundColor(int);
 .setNegativeButtonText(String);
 .setPositiveButtonText(String);
