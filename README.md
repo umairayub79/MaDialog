@@ -4,7 +4,7 @@ Material Alert Dialog
 [![](https://jitpack.io/v/umairayub79/MaDialog.svg)](https://jitpack.io/#umairayub79/MaDialog)
 
 - min SDK 16
-- written in Java
+- was written in Java now in Kotlin
 - simple beautiful dialogs with image and GIF support
 
 
