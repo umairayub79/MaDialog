@@ -40,7 +40,7 @@ class MaDialog {
         private var fontID: Int = 0
         private var buttonOrientation: Int = 0
 
-        private val Buttons = ArrayList<Button>()
+        private val buttons = ArrayList<Button>()
 
         private var cancelOnOutsideTouch = true
 
@@ -137,7 +137,7 @@ class MaDialog {
                 clickListener.onClick()
                 alertDialog?.dismiss()
             }
-            Buttons.add(addbutton)
+            buttons.add(addbutton)
             return this
         }
 
@@ -162,8 +162,8 @@ class MaDialog {
             if (buttonOrientation != 0) {
                 ButtonContainer.orientation = buttonOrientation
             }
-            for (i in Buttons.indices) {
-                ButtonContainer.addView(Buttons[i])
+            for (i in buttons.indices) {
+                ButtonContainer.addView(buttons[i])
             }
 
 
@@ -201,7 +201,7 @@ class MaDialog {
                 tvTitle.setTextColor(titleTextColor)
             }
             if (backgroundColor != 0) {
-                root.setBackgroundResource(backgroundColor)
+                root.setBackgroundColor(backgroundColor)
             }
             if (buttonTextColor != 0) {
                 btnNegative.setTextColor(buttonTextColor)
