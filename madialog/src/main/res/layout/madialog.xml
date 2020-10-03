@@ -37,7 +37,8 @@
                 android:textAlignment="center"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:visibility="gone" />
+                android:visibility="gone"
+                android:gravity="center_horizontal" />
 
             <TextView
                 android:layout_margin="10dp"
@@ -47,7 +48,8 @@
                 android:textAlignment="center"
                 android:visibility="gone"
                 android:paddingEnd="16dp"
-                android:paddingStart="16dp"/>
+                android:paddingStart="16dp"
+                android:gravity="center_horizontal" />
 
             <LinearLayout
                 android:id="@+id/buttonLayout"

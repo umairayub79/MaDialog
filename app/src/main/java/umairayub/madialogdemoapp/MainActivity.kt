@@ -1,6 +1,7 @@
 package umairayub.madialogdemoapp
 
 import android.content.Intent
+import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import android.widget.LinearLayout
@@ -64,6 +65,7 @@ class MainActivity : AppCompatActivity() {
             MaDialog.Builder(this@MainActivity)
                     .setTitle("Basic with Image + Title + Buttons")
                     .setMessage(msg)
+                    .setBackgroundColor(Color.parseColor("#B71C1C"))
                     .setImage(R.drawable.image)
                     .AddNewButton(R.style.AppTheme, "Yes", object : MaDialogListener {
                         override fun onClick() {
