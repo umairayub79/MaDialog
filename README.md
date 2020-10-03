@@ -27,7 +27,7 @@ allprojects {
 Add the dependency to your module build.gradle:
 ```java
 dependencies {
-	implementation 'com.github.umairayub79:MaDialog:1.3'
+	implementation 'com.github.umairayub79:MaDialog:1.5'
 }
 ```
 
