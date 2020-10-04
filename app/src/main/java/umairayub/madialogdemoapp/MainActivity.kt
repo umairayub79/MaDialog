@@ -65,18 +65,25 @@ class MainActivity : AppCompatActivity() {
             MaDialog.Builder(this@MainActivity)
                     .setTitle("Basic with Image + Title + Buttons")
                     .setMessage(msg)
-                    .setBackgroundColor(Color.parseColor("#B71C1C"))
+                    .setMessageTextColor(Color.WHITE)
+                    .setTitleTextColor(Color.WHITE)
+                    .setBackgroundColor(Color.BLUE)
+                    .setPositiveButtonTextColor(Color.GREEN)
+                    .setNegativeButtonTextColor(Color.RED)
                     .setImage(R.drawable.image)
-                    .AddNewButton(R.style.AppTheme, "Yes", object : MaDialogListener {
+                    .setPositiveButtonText("Yes")
+                    .setNegativeButtonText("No")
+                    .setPositiveButtonListener(object : MaDialogListener {
                         override fun onClick() {
 
                         }
                     })
-                    .AddNewButton(R.style.AppTheme, "Cancel", object : MaDialogListener {
+                    .setNegativeButtonListener(object : MaDialogListener {
                         override fun onClick() {
 
                         }
                     })
+
                     .build()
         }
         btn6.setOnClickListener {
