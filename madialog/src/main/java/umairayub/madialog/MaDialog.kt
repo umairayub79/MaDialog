@@ -32,6 +32,8 @@ class MaDialog {
         private var negativeButtonText: String? = null
 
         private var buttonTextColor: Int = 0
+        private var positiveButtonTextColor: Int = 0
+        private var negativeButtonTextColor: Int = 0
         private var messageTextColor: Int = 0
         private var titleTextColor: Int = 0
         private var backgroundColor: Int = 0
@@ -82,6 +84,16 @@ class MaDialog {
 
         fun setButtonTextColor(buttonTextColor: Int): Builder {
             this.buttonTextColor = buttonTextColor
+            return this
+        }
+
+        fun setPositiveButtonTextColor(positiveButtonTextColor: Int): Builder {
+            this.positiveButtonTextColor = positiveButtonTextColor
+            return this
+        }
+
+        fun setNegativeButtonTextColor(negativeButtonTextColor: Int): Builder {
+            this.negativeButtonTextColor = negativeButtonTextColor
             return this
         }
 
@@ -206,6 +218,16 @@ class MaDialog {
             if (buttonTextColor != 0) {
                 btnNegative.setTextColor(buttonTextColor)
                 btnPositve.setTextColor(buttonTextColor)
+                for (i in buttons.indices) {
+                    buttons[i].setTextColor(buttonTextColor)
+                }
+
+            }
+            if (positiveButtonTextColor != 0) {
+                btnPositve.setTextColor(positiveButtonTextColor)
+            }
+            if (negativeButtonTextColor != 0) {
+                btnNegative.setTextColor(negativeButtonTextColor)
             }
             if (negativeButtonText != null) {
                 btnNegative.text = negativeButtonText

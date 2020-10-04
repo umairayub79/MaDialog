@@ -30,6 +30,7 @@
                 android:id="@+id/tvTitleDisplay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
                 android:paddingStart="16dp"
                 android:paddingTop="20dp"
                 android:paddingEnd="16dp"
@@ -37,43 +38,43 @@
                 android:textAlignment="center"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:visibility="gone"
-                android:gravity="center_horizontal" />
+                android:visibility="gone" />
 
             <TextView
-                android:layout_margin="10dp"
                 android:id="@+id/tvMessageDisplay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:visibility="gone"
-                android:paddingEnd="16dp"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal"
                 android:paddingStart="16dp"
-                android:gravity="center_horizontal" />
+                android:paddingEnd="16dp"
+                android:textAlignment="center"
+                android:visibility="gone" />
 
             <LinearLayout
                 android:id="@+id/buttonLayout"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/btn_positive"
-                    android:background="@android:color/transparent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
                     android:visibility="gone" />
+
                 <Button
                     android:id="@+id/btn_negative"
-                    android:background="@android:color/transparent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
                     android:visibility="gone" />
             </LinearLayout>
         </LinearLayout>
