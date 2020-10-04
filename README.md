@@ -76,8 +76,11 @@ dependencies {
 .setBackgroundColor(int);
 .setNegativeButtonText(String);
 .setPositiveButtonText(String);
+.setPositiveButtonTextColor(int)
+.setNegativeButtonTextColor(int)
 .setCancelableOnOutsideTouch(boolean);
 .setPositiveButtonListener(MaDialogListener);
 .setNegativeButtonListener(MaDialogListener);
 .build();
+
 ```
